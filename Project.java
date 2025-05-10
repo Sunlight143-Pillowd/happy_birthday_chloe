@@ -77,6 +77,7 @@ public class Project {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Bin	: ");
 		String bin = sc.next();
+		String ans = "";
 		char ch;
 		int counter = bin.length();
 
@@ -88,9 +89,9 @@ public class Project {
 				int ch1 = Integer.parseInt(Character.toString(ch));
 				int result = ch1 * power;
 				fnal = fnal + result;
-				System.out.print(fnal);
 			}
 		}
+		ans = fnal + " | " + ans;
 
 		if (counter % 3 == 2) {
 			fnal = 0;
@@ -101,7 +102,7 @@ public class Project {
 				int result = ch1 * power;
 				fnal = fnal + result;
 			}
-			System.out.print(fnal);
+			ans = fnal + " | " + ans;
 
 		}
 
@@ -114,8 +115,10 @@ public class Project {
 				int result = ch1 * power;
 				fnal = fnal + result;
 			}
-			System.out.println(fnal);
+			ans = fnal + " | " + ans;
+
 		}
+		System.out.println(ans);
 		System.out.println();
 	}
 
@@ -123,6 +126,7 @@ public class Project {
 		// TODO Auto-generated method stub
 		int fnal = 0;
 		String fnal1 = "";
+		String ans = "";
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Bin	: ");
 		String bin = sc.next();
@@ -141,7 +145,7 @@ public class Project {
 
 			}
 			if (fnal < 10) {
-				System.out.println(fnal);
+				ans = fnal + " | ";
 			} else {
 				switch (fnal) {
 				case 10: {
@@ -170,7 +174,7 @@ public class Project {
 					break;
 				}
 				}
-				System.out.println(fnal1);
+				ans = fnal1 + " | " + ans;
 			}
 		}
 
@@ -183,7 +187,7 @@ public class Project {
 				int result = ch1 * power;
 				fnal = fnal + result;
 			}
-			System.out.println(fnal);
+			ans = fnal + " | " + ans;
 
 		}
 
@@ -196,7 +200,7 @@ public class Project {
 				int result = ch1 * power;
 				fnal = fnal + result;
 			}
-			System.out.println(fnal);
+			ans = fnal + " | " + ans;
 
 		}
 		if (bin.length() % 4 == 1) {
@@ -208,9 +212,9 @@ public class Project {
 				int result = ch1 * power;
 				fnal = fnal + result;
 			}
-			System.out.println(fnal);
-
+			ans = fnal + " | " + ans;
 		}
+		System.out.println(ans);
 		System.out.println();
 	}
 
